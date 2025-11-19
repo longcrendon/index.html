@@ -1,3 +1,5 @@
+html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +20,7 @@
     <h2 style="color:#0066cc; margin-top:0;">Licensee Free Space</h2>
     <p style="font-size:17px; margin-bottom:25px;">
       Claim your free listing below – every approved submission keeps this directory alive!<br>
-      Watch ads to earn your own banner (or buy one instantly if you’re impatient)
+      Watch ads to earn your own banner (or buy one instantly if you’re impatient 😉)
     </p>
     <button onclick="openForm()" style="background:#0066cc; color:white; padding:16px 36px; border:none; border-radius:8px; font-size:19px; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
       Submit Your Free Listing
@@ -27,7 +29,7 @@
 
   <!-- POP-UP FORM -->
   <div id="listingForm" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.75); z-index:9999; overflow:auto;">
-   <div style="background:white; width:90%; max-width:480px; margin:50px auto; padding:30px; border-radius:12px; position:relative; box-shadow:0 10px 40px rgba(0,0,0,0.3); max-height:80vh; overflow-y:auto;">
+    <div style="background:white; width:90%; max-width:480px; margin:50px auto; padding:30px; border-radius:12px; position:relative; box-shadow:0 10px 40px rgba(0,0,0,0.3); max-height:80vh; overflow-y:auto;">
       <span onclick="document.getElementById('listingForm').style.display='none'" style="position:absolute; top:10px; right:20px; font-size:34px; cursor:pointer; color:#999;">×</span>
       <h2 style="text-align:center; color:#0066cc; margin-bottom:25px;">Submit Your Free Directory Listing</h2>
 
@@ -64,145 +66,61 @@
         <input type="tel" name="Number1" required style="width:100%; padding:10px; margin-bottom:20px;">
 
         <label>Contact 2 – WhatsApp (always green)</label>
-        <input type="text" name="Label2" value="WhatsApp" readonly style="width:100%; padding:10px; margin-bottom:8px 0; background:#f0f0f0;">
+        <input type="text" name="Label2" value="WhatsApp" readonly style="width:100%; padding:10px; margin-bottom:8px; background:#f0f0f0;">
         <input type="hidden" name="Colour2" value="#2ecc71">
         <input type="tel" name="Number2" required style="width:100%; padding:10px; margin-bottom:30px;">
 
-      <!-- MAIN CATEGORY – appears once (left-aligned) -->
-<div style="background:#e0e0e0; color:#333; padding:12px 16px; font-weight:bold; font-size:17px; border-radius:6px; margin:50px 0 8px 0; text-align:left;">
-  ANIMAL HUSBANDRY
-</div>
-
-<!-- FIRST LISTING IN A SUB-CATEGORY – includes the sub-category name -->
-<div style="margin-bottom:28px; font-family:Arial, sans-serif;">
-
-  <!-- Sub-category (only on first entry of the group) -->
-  <div style="color:#0066cc; font-weight:bold; font-size:14px; margin-bottom:8px; text-align:left;">
-    Kennels & Catteries                                      <!-- ← appears only once -->
-  </div>
-
-  <!-- Location box – two lines, centred -->
-  <div style="background:#f9f9f9; border:1px solid #ddd; padding:10px 14px; border-radius:6px; text-align:center; font-size:14px; line-height:1.5; margin-bottom:10px;">
-    Hibberdene<br>Port Shepstone area
-  </div>
-
-  <!-- Company name + slogan box – right-aligned -->
-  <div style="background:#ffffff; border:1px solid #ddd; padding:12px 16px; border-radius:6px; margin-bottom:10px; text-align:right;">
-    <div style="font-size:20px; font-weight:bold; color:#1a1a1a;">Hibberdene Kennels & Cattery</div>
-    <div style="font-size:14px; color:#555; font-style:italic; margin-top:4px;">Loving care for your fur babies</div>
-  </div>
-
-  <!-- Contact numbers box -->
-  <div style="background:#ffffff; border:1px solid #ddd; padding:12px 16px; border-radius:6px; font-size:15px;">
-    <div style="margin-bottom:10px;">
-      <span style="color:#e74c3c;">Emergency:</span><br>039 699 8040
-    </div>
-    <div>
-      <span style="color:#2ecc71;">WhatsApp:</span><br>078 624 2964
+        <button type="submit" style="background:#0066cc; color:white; padding:16px; width:100%; border:none; border-radius:8px; font-size:19px;">Submit My Listing</button>
+      </form>
     </div>
   </div>
 
-</div>
+  <script>
+    function openForm() { document.getElementById('listingForm').style.display = 'block'; }
+  </script>
 
-<!-- SUBSEQUENT LISTINGS – same sub-category, NO sub-category line repeated -->
-<div style="margin-bottom:28px; font-family:Arial, sans-serif;">
-
-  <!-- NO sub-category line here – already shown above -->
-
-  <div style="background:#f9f9f9; border:1px solid #ddd; padding:10px 14px; border-radius:6px; text-align:center; font-size:14px; line-height:1.5; margin-bottom:10px;">
-    Margate<br>Ramsgate
+  <!-- FIRST LISTING: Hibberdene Kennels & Cattery -->
+  <div style="background:#e0e0e0; color:#333; padding:12px 16px; font-weight:bold; font-size:17px; border-radius:6px; margin:50px 0 8px 0; text-align:left;">
+    ANIMAL HUSBANDRY
   </div>
 
-  <div style="background:#ffffff; border:1px solid #ddd; padding:12px 16px; border-radius:6px; margin-bottom:10px; text-align:right;">
-    <div style="font-size:20px; font-weight:bold; color:#1a1a1a;">Paws & Stay Kennels</div>
-    <div style="font-size:14px; color:#555; font-style:italic; margin-top:4px;">Luxury boarding</div>
-  </div>
+  <div style="margin-bottom:28px; font-family:Arial, sans-serif;">
 
-  <div style="background:#ffffff; border:1px solid #ddd; padding:12px 16px; border-radius:6px; font-size:15px;">
-    <div style="margin-bottom:10px;">
-      <span style="color:#3498db;">Reception:</span><br>039 317 1111
+    <!-- Sub-category (only once, blue, left-aligned) -->
+    <div style="color:#0066cc; font-weight:bold; font-size:14px; margin-bottom:8px; text-align:left;">
+      Kennels & Catteries
     </div>
-    <div>
-      <span style="color:#2ecc71;">WhatsApp:</span><br>082 999 8888
+
+    <!-- Location box – two lines, centred -->
+    <div style="background:#f9f9f9; border:1px solid #ddd; padding:10px 14px; border-radius:6px; text-align:center; font-size:14px; line-height:1.5; margin-bottom:10px;">
+      Hibberdene<br>Port Shepstone area
     </div>
-  </div<!-- MAIN CATEGORY – left-aligned -->
-<div style="background:#e0e0e0; color:#333; padding:12px 16px; font-weight:bold; font-size:17px; border-radius:6px; margin:50px 0 8px 0; text-align:left;">
-  ANIMAL HUSBANDRY
-</div>
 
-<!-- FIRST LISTING IN SUB-CATEGORY – includes sub-category once -->
-<div style="margin-bottom:28px; font-family:Arial, sans-serif;">
-
-  <!-- Sub-category (only once, blue, left-aligned) -->
-  <div style="color:#0066cc; font-weight:bold; font-size:14px; margin-bottom:8px; text-align:left;">
-    Kennels & Catteries
-  </div>
-
-  <!-- Location box – two lines, centred -->
-  <div style="background:#f9f9f9; border:1px solid #ddd; padding:10px 14px; border-radius:6px; text-align:center; font-size:14px; line-height:1.5; margin-bottom:10px;">
-    Hibberdene<br>Port Shepstone area
-  </div>
-
-  <!-- Company name + slogan box – right-aligned -->
-  <div style="background:#ffffff; border:1px solid #ddd; padding:12px 16px; border-radius:6px; margin-bottom:10px; text-align:right;">
-    <div style="font-size:20px; font-weight:bold; color:#1a1a1a;">Hibberdene Kennels & Cattery</div>
-    <div style="font-size:14px; color:#555; font-style:italic; margin-top:4px;">Pet Food Products Hibberdene</div>
-  </div>
-
-  <!-- Contact numbers box – label above number -->
-  <div style="background:#ffffff; border:1px solid #ddd; padding:12px 16px; border-radius:6px; font-size:15px;">
-    <div style="margin-bottom:10px;">
-      <span style="color:#e74c3c;">Emergency:</span><br>039 699 8040
+    <!-- Company name + slogan box – right-aligned -->
+    <div style="background:#ffffff; border:1px solid #ddd; padding:12px 16px; border-radius:6px; margin-bottom:10px; text-align:right;">
+      <div style="font-size:20px; font-weight:bold; color:#1a1a1a;">Hibberdene Kennels & Cattery</div>
+      <div style="font-size:14px; color:#555; font-style:italic; margin-top:4px;">Pet Food Products Hibberdene</div>
     </div>
-    <div>
-      <span style="color:#2ecc71;">WhatsApp:</span><br>078 624 2964
+
+    <!-- Contact numbers box – label above number -->
+    <div style="background:#ffffff; border:1px solid #ddd; padding:12px 16px; border-radius:6px; font-size:15px;">
+      <div style="margin-bottom:10px;">
+        <span style="color:#e74c3c;">Emergency:</span><br>039 699 8040
+      </div>
+      <div>
+        <span style="color:#2ecc71;">WhatsApp:</span><br>078 624 2964
+      </div>
     </div>
+
   </div>
 
-<!-- MAIN CATEGORY – left-aligned -->
-<div style="background:#e0e0e0; color:#333; padding:12px 16px; font-weight:bold; font-size:17px; border-radius:6px; margin:50px 0 8px 0; text-align:left;">
-  ANIMAL HUSBANDRY
-</div>
-
-<!-- FIRST LISTING IN SUB-CATEGORY – includes sub-category once -->
-<div style="margin-bottom:28px; font-family:Arial, sans-serif;">
-
-  <!-- Sub-category (only once, blue, left-aligned) -->
-  <div style="color:#0066cc; font-weight:bold; font-size:14px; margin-bottom:8px; text-align:left;">
-    Kennels & Catteries
+  <!-- COPYRIGHT FOOTER -->
+  <div style="text-align:center; margin-top:60px; padding:20px; background:#f8f9fa; border-top:3px solid #0066cc; font-size:14px; color:#555;">
+    © 2025 Ruth Temple-Murray · South Coast KZN Quick Reference Directory™<br>
+    All content, design, format and concept are the exclusive intellectual property of the author.<br>
+    Unauthorised reproduction, distribution or commercial use strictly prohibited.
   </div>
-
-  <!-- Location box – two lines, centred -->
-  <div style="background:#f9f9f9; border:1px solid #ddd; padding:10px 14px; border-radius:6px; text-align:center; font-size:14px; line-height:1.5; margin-bottom:10px;">
-    Hibberdene<br>Port Shepstone area
-  </div>
-
-  <!-- Company name + slogan box – right-aligned -->
-  <div style="background:#ffffff; border:1px solid #ddd; padding:12px 16px; border-radius:6px; margin-bottom:10px; text-align:right;">
-    <div style="font-size:20px; font-weight:bold; color:#1a1a1a;">Hibberdene Kennels & Cattery</div>
-    <div style="font-size:14px; color:#555; font-style:italic; margin-top:4px;">Pet Food Products Hibberdene</div>
-  </div>
-
-  <!-- Contact numbers box – label above number -->
-  <div style="background:#ffffff; border:1px solid #ddd; padding:12px 16px; border-radius:6px; font-size:15px;">
-    <div style="margin-bottom:10px;">
-      <span style="color:#e74c3c;">Emergency:</span><br>039 699 8040
-    </div>
-    <div>
-      <span style="color:#2ecc71;">WhatsApp:</span><br>078 624 2964
-    </div>
-  </div>
-
-</div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
 
