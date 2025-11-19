@@ -79,6 +79,35 @@ directory
   <script>
     function openForm() { document.getElementById('listingForm').style.display = 'block'; }
   </script>
+  <!-- FIRST LIVE LISTING -->
+<div style="margin-bottom:40px; font-family:Arial, sans-serif;">
+
+  <div style="background:#f0f0f0; color:#555; padding:8px 12px; font-weight:bold; font-size:15px; border-radius:6px; text-align:center; margin-bottom:10px;">
+    Animal Husbandry
+  </div>
+
+  <!-- grey category box -->
+
+  <div style="background:#f9f9f9; border:1px solid #ddd; padding:8px 12px; border-radius:5px; font-size:14px; line-height:1.5; text-align:center; margin-bottom:10px;">
+    min-height:50px;">
+    Hibberdene<br>Port Shepstone area
+  </div>
+
+  <div style="background:#ffffff; border:1px solid #ddd; padding:10px 14px; border-radius:5px; font-size:20px; font-weight:bold; color:#1a1a1a; text-align:right; margin-bottom:8px;">
+    Hibberdene Kennels & Cattery
+  </div>
+
+  <div style="font-size:14px; color:#555; font-style:italic; text-align:right; margin-bottom:12px; margin-right:14px;">
+    Loving care for your fur babies
+  </div>
+
+  <div style="background:#ffffff; border:1px solid #ddd; padding:10px 14px; border-radius:5px; font-size:15px;">
+    <span style="color:#e74c3c;">Emergency:</span> 039 699 8040 &nbsp;&nbsp;|&nbsp;&nbsp; 
+    <span style="color:#2ecc71;">WhatsApp:</span> 078 624 2964
+  </div>
+
+</div>
+<br><br>
 
 </body>
 </html>
