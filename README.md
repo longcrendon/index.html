@@ -105,6 +105,12 @@ directory
     <span style="color:#e74c3c;">Emergency:</span> 039 699 8040 &nbsp;&nbsp;|&nbsp;&nbsp; 
     <span style="color:#2ecc71;">WhatsApp:</span> 078 624 2964
   </div>
+  
+  <div style="text-align:center; margin-top:60px; padding:20px; background:#f8f9fa; border-top:3px solid #0066cc; font-size:14px; color:#555;">
+  © 2025 Ruth Temple-Murray · South Coast KZN Quick Reference Directory™<br>
+  All content, design, format and concept are the exclusive intellectual property of the author.<br>
+  Unauthorised reproduction, distribution or commercial use strictly prohibited.
+</div>
 
 </div>
 <br><br>
