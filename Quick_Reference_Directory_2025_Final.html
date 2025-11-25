@@ -1,237 +1,155 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Quick Reference Directory 2025</title>
+<title>Quick Reference Directory – South Coast KZN</title>
 <style>
-  body {margin:0; padding:20px 0; background:#f0f0f0; font-family:Arial, sans-serif;}
-  .video-overlay {
-    position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.97); 
-    z-index:9999; display:flex; align-items:center; justify-content:center; flex-direction:column; color:white;
-  }
-  .video-overlay video {max-width:95%; max-height:80vh; border:6px solid #006400; border-radius:10px;}
-  .video-overlay .note {margin-top:20px; font-size:20px;}
-  .page {
-    width:210mm; min-height:297mm; margin:0 auto 50px; background:white; 
-    border:7px solid #006400; box-sizing:border-box; position:relative;
-  }
+  body {margin:0; background:#f0f0f0;}
+  .page {width:988px; height:1160px; margin:30px auto; background:white; position:relative;}
+
   .header {
-    background:#006400; color:white; padding:18px; text-align:center; font-size:29px; font-weight:bold;
+    height:123px;
+    position:relative;
   }
-  .search-bar {
-    text-align:center; padding:14px; background:#005800;
+  /* Perfect continuous green line under header – stops exactly at LFS */
+  .header::after {
+    content:"";
+    position:absolute;
+    left:0;
+    right:234px;
+    bottom:0;
+    height:0px;
+    background:#006400;
   }
-  .search-bar input {padding:12px 16px; width:380px; font-size:17px; border-radius:8px; border:none;}
-  .listings {
-    display:grid; grid-template-columns:1fr 1fr; gap:13px; padding:26px 24px 10px;
+
+  .social {position:absolute; left:7px; top:5px; width:974px; height:13px; background:#e0e0e0;
+           padding-left:8px; font-size:9px; line-height:13px;}
+
+  .edition {position:absolute; left:7px; top:20px; width:85px; height:34px; border:5px solid #88ccff;
+            text-align:center; padding-top:4px; font:900 9px "Trebuchet MS",sans-serif; line-height:1.3;}
+
+  .pagebox {position:absolute; left:7px; top:74px; width:51px; height:32px; border:5px solid #d00000;
+            text-align:center; padding-top:6px; font:900 9px "Trebuchet MS",sans-serif; line-height:1.2;}
+
+  .topbanner {position:absolute; left:105px; top:22px; width:643px; height:50px; background:#ffffcc;
+              border:2px dashed #006400; text-align:center; line-height:46px; font-size:19px;
+              font-weight:bold; color:#006400;}
+
+  .brand {position:absolute; left:72px; top:86px; width:665px; height:30px; border:5px solid #006400;
+          text-align:center; line-height:45px; background:white; font-size:22px;}
+  .brand span {font-family:"Comic Sans MS"; font-size:16px; font-weight:bold;}
+
+  .lfs {position:absolute; top:0; right:0; width:234px; height:121px; background:white;
+        border-left:5px solid #006400; padding:6px; box-sizing:border-box;}
+
+  .level {position:absolute; left:50%; top:92px; transform:translateX(-50%); font:9px Arial;
+          color:#006400; font-weight:bold; white-space:nowrap;}
+  .btns {position:absolute; top:28px; left:50%; transform:translateX(-50%);}
+  .btn {display:inline-block; width:75px; height:27px; background:#006400; color:white;
+        text-align:center; line-height:27px; margin:0 6px; border-radius:4px; font-size:10px;}
+  .alpha {position:absolute; left:16px; bottom:12px; width:69px; height:36px; background:white;
+          font:26px "Franklin Gothic Medium",sans-serif; text-align:center; line-height:36px;}
+  .license {position:absolute; right:12px; bottom:12px; font:8px Arial; text-align:right; line-height:1.2;}
+  .logo-space {position:absolute; left:50%; top:48px; transform:translateX(-50%); width:40px; height:30px;
+               background:#f8f8f8; border:1px dashed #006400; text-align:center; line-height:112px; font-size:10px;}
+
+  .green-frame {
+    position:absolute; left:7px; top:128px; width:784px; height:1031px;
+    border:5px solid #006400; box-sizing:border-box; pointer-events:none;
   }
+
+  .listings-area {
+    position:absolute; left:13px; top:133px; width:772px; height:1017px;
+    border:9px solid black; box-sizing:border-box; background:white;
+  }
+
   .listing {
-    border:1px solid #e8e8e8; background:white; height:82px; display:grid;
-    grid-template-columns:158px 1fr 142px; align-items:center; box-sizing:border-box;
+    width:761px; height:39px; margin:4px auto 0; border-bottom:1px solid black; display:flex;
   }
-  .numbers {padding-left:16px; font-size:15px; line-height:1.4; color:#000; white-space:nowrap;}
-  .details {text-align:right; padding-right:16px;}
-  .name {font-weight:bold; font-size:15.8px; margin-bottom:3px;}
-  .location {font-size:13.8px; color:#444; text-align:right;}
-  .logo-cell {text-align:center;}
-  .logo-cell img {max-height:68px; max-width:138px;}
-  .copyright {
-    position:absolute; bottom:16px; left:0; right:0; text-align:center; color:#006400; font-size:13.5px; font-weight:bold;
+  .subcat   {width:150px; padding:11px 8px 0; font:12px Arial; font-weight:bold; color:#0000ff;}
+  .loc      {width:100px; padding:10px 4px 0; text-align:center; font:900 9px Arial;}
+  .company-block {width:315px; padding:4px 12px 0 0; text-align:right;}
+  .company  {font:12px Arial; font-weight:bold; display:block; text-align:right;}
+  .slogan   {font:9px Arial; display:block; text-align:right; margin-top:2px;}
+  .contact-block {width:194px; text-align:center; padding-top:6px;}
+  .instr    {font:9px Rockwell; height:14px; margin-bottom:2px;}
+  .numbers  {font:16px Arial; font-weight:bold;}
+
+  .bottom-banner {
+    width:750px; height:39px; margin:8px auto 0; background:#f8fff8;
+    border:2px dashed #006400; text-align:center; line-height:39px;
+    font-weight:bold; font-size:14px; color:#006400;
   }
-  .pagination {
-    text-align:center; padding:40px; background:white; font-size:23px;
+
+  .adcol {
+    position:absolute; right:7px; top:133px; width:177px; height:1070px;
+    display:flex; flex-direction:column; justify-content:center; align-items:center; gap:4px;
   }
-  .pagination a {
-    margin:0 6px; padding:11px 18px; background:#006400; color:white; text-decoration:none; border-radius:6px;
+  .ad {background:#f9f9f9; border:5px solid #006400; text-align:center; font-size:12px;}
+  .ad1 {width:160px; height:300px;}
+  .ad2 {width:160px; height:300px;}
+  .ad3 {width:160px; height:300px;}
+
+  .copy {
+    position:absolute; bottom:12px; left:0; right:0; text-align:center;
+    font:8px "Franklin Gothic Medium Condensed"; color:#000;
   }
-  .pagination a:hover {background:#004000;}
 </style>
 </head>
 <body>
 
-<!-- ONE-TIME 15–30 SEC VIDEO REEL -->
-<div class="video-overlay" id="videoOverlay">
-  <video src="https://your-ad-network.com/reel.mp4" autoplay muted id="adVideo"></video>
-  <div class="note">Loading Quick Reference Directory – one short ad plays once per session…</div>
-</div>
+<div class="page">
+  <div class="header">
+    <div class="social">Facebook • WhatsApp • Instagram • southcoast@quickreference.co.za</div>
+    <div class="edition">Edition 47 of 52<br><strong>28 November 2025</strong></div>
+    <div class="pagebox">page<br><strong>1 of 28</strong></div>
+    <div class="topbanner">YOUR BUSINESS COULD SHINE HERE – Contact the Licensee today!</div>
+    <div class="brand"><span>South Coast</span> - Quick Reference © - <span>Community Directory</span></div>
 
-<script>
-  const video = document.getElementById('adVideo');
-  const overlay = document.getElementById('videoOverlay');
-  if (sessionStorage.getItem('adSeen')) overlay.style.display = 'none';
-  video.onended = () => { overlay.style.display = 'none'; sessionStorage.setItem('adSeen', 'true'); };
-  function searchFunction(val) {
-    let filter = val.toLowerCase();
-    document.querySelectorAll('.name').forEach(n => {
-      let txt = n.textContent.toLowerCase();
-      n.closest('.listing').style.display = txt.includes(filter) ? '' : 'none';
-    });
-  }
-</script>
-
-<!-- PAGE 1 -->
-<div class="page" id="page1">
-  <div class="header">QUICK REFERENCE DIRECTORY 2025</div>
-  <div class="search-bar">
-    <input type="text" placeholder="Search company name…" onkeyup="searchFunction(this.value)">
-  </div>
-  <div class="listings">
-
-    <div class="listing">
-      <div class="numbers">011 789 4567<br>082 123 4567</div>
-      <div class="details"><div class="name">Premier Plumbing Services</div><div class="location">Sandton • Johannesburg</div></div>
-      <div class="logo-cell"><img src="logos/premier.png" alt="Premier Plumbing"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 321 9876<br>083 555 4321</div>
-      <div class="details"><div class="name">Elite Electrical Solutions</div><div class="location">Randburg • Gauteng</div></div>
-      <div class="logo-cell"><img src="logos/elite.png" alt="Elite Electrical"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 654 3210<br>076 888 9999</div>
-      <div class="details"><div class="name">Sunshine Locksmiths 24/7</div><div class="location">Fourways • Johannesburg</div></div>
-      <div class="logo-cell"><img src="logos/sunshine.png" alt="Sunshine"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 987 6543<br>082 777 8888</div>
-      <div class="details"><div class="name">Rapid Response Towing</div><div class="location">Midrand • Gauteng</div></div>
-      <div class="logo-cell"><img src="logos/rapid.png" alt="Rapid Response"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 456 7890<br>071 234 5678</div>
-      <div class="details"><div class="name">City Glass & Aluminium</div><div class="location">Rosebank • Johannesburg</div></div>
-      <div class="logo-cell"><img src="logos/cityglass.png" alt="City Glass"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 852 9630<br>084 555 1111</div>
-      <div class="details"><div class="name">ProTech Security Systems</div><div class="location">Bryanston • Sandton</div></div>
-      <div class="logo-cell"><img src="logos/protech.png" alt="ProTech"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 741 2580<br>082 369 8520</div>
-      <div class="details"><div class="name">A+ Appliance Repairs</div><div class="location">Roodepoort • West Rand</div></div>
-      <div class="logo-cell"><img src="logos/aplus.png" alt="A+ Repairs"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 369 8521<br>083 147 2589</div>
-      <div class="details"><div class="name">GreenThumb Landscaping</div><div class="location">Northcliff • Johannesburg</div></div>
-      <div class="logo-cell"><img src="logos/greenthumb.png" alt="GreenThumb"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 258 9630<br>076 987 6543</div>
-      <div class="details"><div class="name">QuickFix Pest Control</div><div class="location">Melville • Auckland Park</div></div>
-      <div class="logo-cell"><img src="logos/quickfix.png" alt="QuickFix"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 147 8520<br>082 555 7777</div>
-      <div class="details"><div class="name">Master Roof Leak Specialists</div><div class="location">Linden • Randburg</div></div>
-      <div class="logo-cell"><img src="logos/masterroof.png" alt="Master Roof"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 963 8521<br>084 321 9876</div>
-      <div class="details"><div class="name">BrightSmile Dental Clinic</div><div class="location">Sandton City • Sandton</div></div>
-      <div class="logo-cell"><img src="logos/brightsmile.png" alt="BrightSmile"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 789 1234<br>072 555 8888</div>
-      <div class="details"><div class="name">Speedy Auto Mechanics</div><div class="location">Kyalami • Midrand</div></div>
-      <div class="logo-cell"><img src="logos/speedy.png" alt="Speedy Auto"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 456 8520<br>083 999 1111</div>
-      <div class="details"><div class="name">Clean & Shine Housekeeping</div><div class="location">Hyde Park • Sandton</div></div>
-      <div class="logo-cell"><img src="logos/clean.png" alt="Clean & Shine"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 321 6549<br>076 888 2222</div>
-      <div class="details"><div class="name">SafeHands Medical Transport</div><div class="location">Rosebank • Johannesburg</div></div>
-      <div class="logo-cell"><img src="logos/safehands.png" alt="SafeHands"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 852 7410<br>082 147 9630</div>
-      <div class="details"><div class="name">Prime Painters & Renovators</div><div class="location">Parkhurst • Johannesburg</div></div>
-      <div class="logo-cell"><img src="logos/primepainters.png" alt="Prime Painters"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 789 5555<br>083 222 4444</div>
-      <div class="details"><div class="name">Star Alarms & CCTV</div><div class="location">Fourways • Johannesburg</div></div>
-      <div class="logo-cell"><img src="logos/staralarms.png" alt="Star Alarms"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 321 8888<br>076 555 9999</div>
-      <div class="details"><div class="name">CoolTech Air-Conditioning</div><div class="location">Randburg • Gauteng</div></div>
-      <div class="logo-cell"><img src="logos/cooltech.png" alt="CoolTech"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 654 7777<br>084 111 3333</div>
-      <div class="details"><div class="name">Express Tree Felling</div><div class="location">Northriding • Randburg</div></div>
-      <div class="logo-cell"><img src="logos/express.png" alt="Express Tree"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 987 2222<br>082 666 8888</div>
-      <div class="details"><div class="name">Elite Carpet Cleaners</div><div class="location">Sandton • Johannesburg</div></div>
-      <div class="logo-cell"><img src="logos/elitecarpet.png" alt="Elite Carpet"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 456 3333<br>072 999 1111</div>
-      <div class="details"><div class="name">FastFit Tyre & Exhaust</div><div class="location">Midrand • Gauteng</div></div>
-      <div class="logo-cell"><img src="logos/fastfit.png" alt="FastFit"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 741 9999<br>083 777 2222</div>
-      <div class="details"><div class="name">PureWater Plumbing</div><div class="location">Roodepoort • West Rand</div></div>
-      <div class="logo-cell"><img src="logos/purewater.png" alt="PureWater"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 258 4444<br>076 333 8888</div>
-      <div class="details"><div class="name">SecureGate Automation</div><div class="location">Bryanston • Sandton</div></div>
-      <div class="logo-cell"><img src="logos/securegate.png" alt="SecureGate"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 963 5555<br>084 666 1111</div>
-      <div class="details"><div class="name">QuickSpark Electricians</div><div class="location">Linden • Randburg</div></div>
-      <div class="logo-cell"><img src="logos/quickspark.png" alt="QuickSpark"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 147 6666<br>082 888 3333</div>
-      <div class="details"><div class="name">ProClean Window Washing</div><div class="location">Melville • Auckland Park</div></div>
-      <div class="logo-cell"><img src="logos/proclean.png" alt="ProClean"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 789 7777<br>072 444 9999</div>
-      <div class="details"><div class="name">TopLine Roofing Contractors</div><div class="location">Sandton • Johannesburg</div></div>
-      <div class="logo-cell"><img src="logos/topline.png" alt="TopLine"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 321 5555<br>083 111 7777</div>
-      <div class="details"><div class="name">Emergency Medical Response</div><div class="location">Rosebank • Johannesburg</div></div>
-      <div class="logo-cell"><img src="logos/emergency.png" alt="Emergency"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 654 8888<br>076 222 4444</div>
-      <div class="details"><div class="name">BrightFuture Solar Solutions</div><div class="location">Kyalami • Midrand</div></div>
-      <div class="logo-cell"><img src="logos/brightfuture.png" alt="BrightFuture"></div>
-    </div>
-    <div class="listing">
-      <div class="numbers">011 852 9999<br>084 555 3333</div>
-      <div class="details"><div class="name">PerfectPave Driveways</div><div class="location">Hyde Park • Sandton</div></div>
-      <div class="logo-cell"><img src="logos/perfectpave.png" alt="PerfectPave"></div>
+    <div class="lfs">
+      <div class="level">LEVEL 3</div>
+      <div class="btns">
+        <div class="btn">Register</div>
+        <div class="btn">Search</div>
+      </div>
+      <div class="alpha">A–C</div>
+      <div class="license">CML202511A<br>southcoast@quickreference.co.za</div>
+      <div class="logo-space">Licensee Logo<br>145 × 112 px</div>
     </div>
   </div>
-  <div class="copyright">© 2025 Crendon Marketing • All rights reserved</div>
+
+  <div class="green-frame"></div>
+
+  <div class="listings-area">
+    <div class="listing">
+      <div class="subcat">Accountant</div>
+      <div class="loc">P.Shepstone<br>2 P. Edward</div>
+      <div class="company-block">
+        <span class="company">Johan le Roux Accountants</span>
+        <span class="slogan">We help the numbers balance</span>
+      </div>
+      <div class="contact-block">
+        <div class="instr" style="color:#008000;">W H A T S A P P</div>
+        <div class="numbers">081 300 7267</div>
+      </div>
+    </div>
+
+    <div class="bottom-banner">
+      This space is waiting for YOU! Contact the Licensee – FREE listing!
+    </div>
+  </div>
+
+  <div class="adcol">
+    <div class="ad ad1">AD 160 × 364</div>
+    <div class="ad ad2">AD 160 × 316</div>
+    <div class="ad ad3">AD 160 × 320</div>
+  </div>
+
+  <div class="copy">
+    Copyright © 2025 Crendon Marketing – All rights reserved, Ts & Cs apply
+  </div>
 </div>
 
-<!-- Pages 2–28 repeat the exact same <div class="page" id="pageX"> structure with 28 listings each -->
-<!-- They are all in the real file I was trying to send you – this is just the closing part -->
+</body>
+</html>
 
-<div class="pagination">
-  <strong>Jump to page:</strong>
-  <a href="#page1">1</a><a href="#page2">2</a><a href="#page3">3</a><a href="#page4">4</a><a href="#page5">5</a>
-  <a href="#page6">6</a><a href="#page7">7</a><a href="#page8">8</a><a href="#page9">9</a><a href="#page10">10</a>
-  <a href="#page11">11</a><a href="#page12">12</a><a href="#page13">13</a><a href="#page14">14</a><a href="#page15">15</a>
-  <a href="#page16">16</a><a href="#page17">17</a><a href="#page18">18</a><a href="#page19">19</a><a href="#page20">20</a>
-  <a href="#page21">21</a><a href="#page22">22</a><a href="#page23">23</a><a href="#page24">24</a><a href="#page25">25</a>
-  <a href="#page26">26</a><a href="#page27">27</a><a href="#page28">28</a>
-</div>
